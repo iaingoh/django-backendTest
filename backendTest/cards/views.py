@@ -1,24 +1,21 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import json
+import random
 
 def load_json(request):
     with open('cards/resources/response.json') as f:
         collection = json.load(f)
 
-        for card in collection:
+        deck = []
+        for i in range(30):
+            deck.append(random.choice(collection))
+
+        for card in deck:
             print(card['name'])
 
-        print(len(collection))
-        print(type(collection))
-
-        card1 = collection[0]
-        print(type(card1))
-        print(len(card1))
-
-        card2 = collection[1]
-        print(len(card2))
-
-
+    print(len(deck))
     return HttpResponse('<h3>The view is loaded</h3>')
+
+
 
