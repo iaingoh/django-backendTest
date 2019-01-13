@@ -35,4 +35,5 @@ Two project requirements:
     - Or rather, there may be a built in module as itertools that can perform such sorting efficiently. The thing was that 
     each card's attributes may have been different from the next so it was difficult to loop through the differently formatted
     cards.
+    - Storing a dictionary object in Django's model class isn't straightforward and so the loaded json file was exposed to the endpoint directly, bypassing Django's model class entirely.
 - Cards may or may not repeat more than twice.
