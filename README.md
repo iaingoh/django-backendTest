@@ -1,5 +1,5 @@
 # django-backendTest
-Create random thirty card deck to expose via endpoint. The development process has been commited, logged and pushed regularly, to extensively document the development process. The project started off without Django but as a standlone python script loading the json response and randomly cutting the deck. You may find the repo here: https://github.com/iaingoh/lomotif-technicaltest1 . When i realized that the sorting algorithm i tried to implement was full of holes, i scraped it and decided to structure the entire project first and then look into it after. The project now exposes the a random deck via the endpoint.
+Create random thirty card deck to expose via endpoint. The development process has been commited, logged and pushed regularly, to extensively document the development process. The project started off without Django but as a standlone python script loading the json response and randomly cutting the deck. You may find the repo here: https://github.com/iaingoh/lomotif-technicaltest1 . When i realized that the sorting algorithm i tried to implement was full of holes, i scraped it and decided to structure the entire project first and then look into it after. The project now exposes a random deck via the endpoint.
 
 ---
 
