@@ -24,15 +24,24 @@ class CardList(APIView):
     def get(self, request):
         with open('cards/resources/response.json') as f:
             collection = json.load(f)
+
             deck = []
-
-            for i in range(30):
-                deck.append(random.choice(collection))
-
+            flag = True
+            while flag:
+                card = random.choice(collection)
+                if not deck:
+                    deck.append(card)
+                    playerClass = card['playerClass']
+                    continue
+                elif len(deck) < 30:
+                    if card['playerClass'] == playerClass or card['playerClass'] == 'Neutral':
+                        deck.append(card)
+                else:
+                    flag = False
             for card in deck:
-                print(card['name'])
-
-        print(len(deck))
+                print(card['playerClass'])
+            print(len(deck))
+        
         return Response(deck)
 
 
