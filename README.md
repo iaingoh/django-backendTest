@@ -24,7 +24,6 @@ The project may also be cloned but be sure to install dependencies as *django an
 
 ```
 /admin
-/dev
 /cards
 ```
 
